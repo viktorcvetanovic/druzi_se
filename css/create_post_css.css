@@ -1,0 +1,30 @@
+button{
+    border: 1px solid black;
+    background-color: rgb(168, 111, 142);
+}
+
+div{
+    color: #18191a;
+    text-align: center;
+}
+
+label,input[type="file"]{
+    color: white;
+}
+body{
+    background-color: #18191a;
+    max-height: 100%;
+}
+
+/* #18191a */
+
+
+.wrapper_main{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(36, 37, 38);
+}
+
+textarea{
+resize: none;
+}

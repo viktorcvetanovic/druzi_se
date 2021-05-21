@@ -1,0 +1,55 @@
+*{
+    color: white;
+    text-align: center;
+}
+
+body{
+    background-color: #18191a;
+}
+
+.wrapper_for_profile {
+    background-color: rgb(36, 37, 38);
+    display:flex;
+   justify-content: flex-end;
+    align-items: center;
+}
+
+.profile_name {
+    margin-right: 2rem;
+}
+
+.profile_photo{
+    margin-right: 1rem;
+}
+
+.wrapper_for_blog {
+
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 2%;
+    margin-top: 1rem;
+    padding: 1px;
+}
+
+.wrapper_for_navbar {
+    background-color: rgb(36, 37, 38);
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper_for_navbar img{
+    width:150px;
+}
+
+.add_post h3{
+    text-align: left;
+ cursor: pointer;
+}
+
+.add_post h3 a:hover{
+    color: rgb(168, 111, 142);
+}
+
+.post div{
+    margin-top: 2rem;
+}
