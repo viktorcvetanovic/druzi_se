@@ -13,7 +13,7 @@
 <header>
     <div class="wrapper_for_navbar">
         <div>
-            <img src="img/logo.png">
+           <a href="index.php"> <img src="img/logo.png"></a>
         </div>
         <div class="wrapper_for_profile">
             <div class="profile_name">
@@ -21,11 +21,13 @@
                 session_start();
                 include('includes/crud/DataBase.php');
                 $user = DataBase::readUserById($_SESSION["id"]);
+                echo "<a href='profile.php' class='goto_profile'>";
                 echo $user->getUsername();
+                echo "</a>";
                 ?>
             </div>
             <div class="profile_photo">
-                <p>slika</p>
+                <a href="profile.php"> <img src="img/avatar.png"></a>
             </div>
         </div>
     </div>

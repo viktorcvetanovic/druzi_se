@@ -41,9 +41,22 @@ body{
     width:150px;
 }
 
+.profile_photo img{
+    width: 100px;
+    height: 100px;
+}
+
 .add_post h3{
     text-align: left;
  cursor: pointer;
+}
+
+.goto_profile{
+    cursor: pointer;
+}
+
+.goto_profile:hover{
+    color: rgb(168, 111, 142);
 }
 
 .add_post h3 a:hover{
