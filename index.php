@@ -31,11 +31,11 @@
                 </div>
             </div>   
             <div class="flex_right">
-                <div class="slideShow">
-                    <video width="750" height="500" controls autoplay class="mySlides">
-                        <source src="img/video.mp4" type="video/mp4">
-                    </video>
-                </div>
+<!--                <div class="slideShow">-->
+<!--                    <video width="750" height="500" controls autoplay class="mySlides">-->
+<!--                        <source src="img/video.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
             </div>
         </div>
     </div>

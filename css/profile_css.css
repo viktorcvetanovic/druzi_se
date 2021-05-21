@@ -2,3 +2,14 @@ body{
     background-color: #18191a;
     max-height: 100%;
 }
+
+.center_all_profile{
+    text-align: center;
+}
+*{
+    color: white;
+}
+.photo img{
+    height: 400px;
+    width: 400px;
+}
