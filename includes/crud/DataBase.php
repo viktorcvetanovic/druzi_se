@@ -68,18 +68,6 @@ class DataBase
         return $array;
     }
 
-    static function readAllComentsByUserIdAndPostId($user_id, $post_id)
-    {
-        $query = "SELECT * FROM comments WHERE user_fk=='$user_id' AND post_fk='$post_id'";
-        $conn = mysqli_connect("localhost", "root", "root", "druzi_se");
-        $array = [];
-        if ($result = $conn->query($query)) {
-            while ($row = $result->fetch_row()) {
-                $array[] = Comments::withRow($row);
-            }
-        }
-        return $array;
-    }
 
     static function readAllCommentsByPostId($post_id)
     {
@@ -95,6 +83,22 @@ class DataBase
         }
         return $array;
     }
+
+    static function readAllCommentsByUserId($user_id){
+
+        $query = "select * from comments
+    join post on comments.post_fk = post.id 
+    join user on comments.user_fk = user.id where comments.user_fk=$user_id ";
+        $conn = mysqli_connect("localhost", "root", "root", "druzi_se");
+        $array = [];
+        if ($result = $conn->query($query)) {
+            while ($row = $result->fetch_row()) {
+                $array[] =new CommentUserDTO($row[12],$row[1]);
+            }
+        }
+        return $array;
+    }
+
 
     static  function addComment($commentar_body,$user_fk,$post_fk){
         $query = "INSERT INTO comments(commentar_body,user_fk,post_fk) VALUES('$commentar_body','$user_fk','$post_fk')";

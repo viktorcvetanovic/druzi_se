@@ -27,7 +27,22 @@
         echo "Email korisnika";
         echo "<br>";
         echo $user->getEmail();
+        echo "<br>";
+        echo "<br>";
+        echo "Svi tvoji komentari:";
+        echo "<br>";
+        echo "<br>";
+        foreach (DataBase::readAllCommentsByUserId($_SESSION['id']) as $item){
+         if($item instanceof CommentUserDTO){
+             echo $item->getCommentBody();
+             echo "<br>";
+         }
+
+
+        }
         ?>
+
+
     </div>
 </div>
 </body>

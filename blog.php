@@ -11,6 +11,7 @@
 </head>
 <body>
 <header>
+
     <div class="wrapper_for_navbar">
         <div>
            <a href="index.php"> <img src="img/logo.png"></a>
@@ -19,6 +20,9 @@
             <div class="profile_name">
                 <?php
                 session_start();
+                if(isset($_SESSION['id'])==false){
+                    header('Location: /index.php');
+                }
                 include('includes/crud/DataBase.php');
                 $user = DataBase::readUserById($_SESSION["id"]);
                 echo "<a href='profile.php' class='goto_profile'>";
