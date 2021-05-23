@@ -101,4 +101,15 @@ class DataBase
         $conn = mysqli_connect("localhost", "root", "root", "druzi_se");
         return $conn->query($query);
     }
+
+    static function addMessage(Message $message){
+        $first_name=$message->getFirstName();
+        $last_name=$message->getLastName();
+        $email=$message->getEmail();
+        $message_value=$message->getMessage();
+        $query="INSERT INTO message(first_name,last_name,email,message) VALUES 
+                                    ('$first_name','$last_name','$email','$message_value')";
+        $conn = mysqli_connect("localhost", "root", "root", "druzi_se");
+        return $conn->query($query);
+    }
 }
