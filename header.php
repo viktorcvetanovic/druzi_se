@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/header_css.css">
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a class="active" href="#home">Pocetna</a>
+  <a href="blog.php">Blog</a>
+  <a href="#contact">Kontakt</a>
+  <a href="#about">O nama</a>
 </div>
