@@ -68,6 +68,26 @@
 </div>
 <div class="contact" id="contact">
    <h1>O nama</h1>
+    <div style=" text-align: left">
+    <img  id="train" src="http://codeskulptor-demos.commondatastorage.googleapis.com/descent/bomb_24_24.png">
+    <p style="color: red !important;text-align: left">Click me</p>
+    </div>
+    <script>
+        train.onclick = function() {
+            let start = Date.now();
+
+            let timer = setInterval(function() {
+                let timePassed = Date.now() - start;
+
+                train.style.left = timePassed + 2 + 'px';
+                train.style.border=1+'px'+' solid'+' red';
+
+                if (timePassed > 500) clearInterval(timer);
+
+            }, 19);
+        }
+    </script>
+
     <div class="flex_with_picture">
         <div>
             <p>In tristique, nunc ut auctor condimentum, tellus lacus efficitur purus,
@@ -80,7 +100,7 @@
                 faucibus non vel urna. . </p>
         </div>
         <div>
-            <img src="img/marker.png" >
+            <img src="img/marker.jpg" >
         </div>
     </div>
 </div>
