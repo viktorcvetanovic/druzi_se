@@ -29,9 +29,13 @@
         echo $user->getEmail();
         echo "<br>";
         echo "<br>";
+        echo '<form action="/includes/logout.inc.php" method=POST>
+          <button type="submit" style="color: black">Odjavi se</button> </form>';
         echo "Svi tvoji komentari:";
         echo "<br>";
         echo "<br>";
+        echo '';
+
         foreach (DataBase::readAllCommentsByUserId($_SESSION['id']) as $item){
          if($item instanceof CommentUserDTO){
              echo $item->getCommentBody();

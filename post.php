@@ -9,7 +9,7 @@
 function createPost($id, $user, $header, $body, $picture, $price, $date)
 {
 
-    $user_id=$_SESSION["id"];
+    $user_id = $_SESSION["id"];
     echo "
 
         <div style='background-color: rgb(35, 37, 38); ' class='main_div_post'>
@@ -34,6 +34,7 @@ function createPost($id, $user, $header, $body, $picture, $price, $date)
         <span style='color: rgb(168, 111, 142)'>Cena:</span>  
         $price
         </p>
+    <button type='submit' class='button_for_buy'>Kupi</button>
         </div>
         <div class='comments'>
         <form action='includes/create_comment.inc.php' method='post'>
@@ -48,11 +49,12 @@ function createPost($id, $user, $header, $body, $picture, $price, $date)
         if ($item instanceof CommentUserDTO)
             echo $item->getUsername();
         echo ":  ";
-            echo $item->getCommentBody();
-            echo "<br>";
+        echo $item->getCommentBody();
+        echo "<br>";
     }
     echo "   </div></div> </div>";
 }
+
 ?>
 </body>
 </html>

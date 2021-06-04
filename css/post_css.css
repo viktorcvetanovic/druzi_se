@@ -25,6 +25,13 @@
     color: white;
 }
 
+.button_for_buy{
+    color: white;
+    background-color: rgb(168, 111, 142);
+}
+
+
+
 /*.header_with_icon{*/
 /*    display: flex;*/
 /*    justify-content: center;*/
